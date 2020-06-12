@@ -1,0 +1,392 @@
+/* Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400&family=Lato:wght@300;400;700&display=swap");
+
+/* CSS Variables  */
+:root {
+    --color-primary: 32, 38, 74;
+    --color-secondary: 254, 221, 16;
+}
+
+/* Utility Classes  */
+
+.bg-dark {
+    background-color: rgba(var(--color-primary));
+}
+.bg-light-dark {
+    background-color: rgb(46, 73, 230);
+}
+.bg-light {
+    background-color: #ddd;
+}
+.clr-fix {
+    clear: both;
+}
+
+.text-primary {
+    color: rgb(var(--color-secondary));
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 3px;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: all 0.4s;
+}
+
+.btn-primary {
+    color: #000;
+    background-color: rgb(var(--color-secondary));
+}
+
+.btn-light {
+    color: #000;
+    background-color: #eee;
+}
+
+.btn-primary:hover {
+    background-color: #eee;
+}
+.btn-light:hover {
+    background-color: rgb(var(--color-secondary));
+}
+.container {
+    margin: auto;
+    max-width: 110rem;
+    overflow: auto;
+    padding: 0 2rem;
+}
+
+.fs-small {
+    font-size: 1.6rem;
+}
+
+.fs-medium {
+    font-size: 3rem;
+}
+
+.fs-large {
+    font-size: 5rem;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.padding-small {
+    padding: 1rem 0;
+}
+
+.padding-medium {
+    padding: 2rem 0;
+}
+
+.padding-large {
+    padding: 3rem 0;
+}
+
+/* Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 66.6%;
+}
+
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #ddd;
+    background-color: rgba(var(--color-primary));
+}
+
+h1,
+h2,
+h3 {
+    padding: 2rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+/* Header section  */
+
+header {
+    background: linear-gradient(
+            rgba(var(--color-primary), 0.7),
+            rgba(var(--color-primary), 0.7)
+        ),
+        url(../img/hero.jpg) no-repeat center center/cover;
+    height: 100%;
+    padding-bottom: 15rem;
+}
+
+/* navbar  */
+#navbar .logo {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 4rem;
+    float: left;
+    padding-top: 2rem;
+}
+#navbar .logo a {
+    color: #fff;
+}
+
+#navbar ul {
+    float: right;
+    list-style: none;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    padding: 1.5rem 2rem;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#navbar ul li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: rgb(var(--color-secondary));
+}
+
+/* hero section  */
+.hero {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+}
+
+.hero-content p {
+    font-size: 2rem;
+}
+
+.hero-content a {
+    margin-top: 2rem;
+}
+
+/* home info section  */
+#home-info-section {
+    height: 50rem;
+    background-color: rgba(var(--color-primary));
+    overflow: hidden;
+}
+
+.home-info-image {
+    float: left;
+    width: 50%;
+    background: url("../img/hotel-1.jpg") no-repeat center center/cover;
+    min-height: 100%;
+}
+.home-info-content {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.home-info-content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    display: inline-block;
+}
+.home-info-content h2 span {
+    font-size: 4rem;
+}
+.home-info-content p {
+    margin: 0 5rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+@media (max-width: 1143px) {
+    #home-info-section {
+        height: 100%;
+        padding-bottom: 5rem;
+    }
+    .home-info-content {
+        float: none;
+        width: 100%;
+    }
+
+    .home-info-content h2 span {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    .home-info-content p {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: justify;
+        margin: 0 2rem;
+    }
+
+    .home-info-image {
+        float: none;
+        background: none;
+        width: 0;
+        display: none;
+    }
+}
+
+#offering-section {
+    color: #111;
+    overflow: auto;
+    min-height: 50rem;
+    padding: 5rem 0;
+    text-align: center;
+    background-color: rgb(var(--color-secondary));
+}
+
+#offering-section h2 {
+    margin-bottom: 4rem;
+    border-bottom: 3px solid rgb(var(--color-primary));
+    color: rgb(var(--color-primary));
+}
+
+.box {
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding-bottom: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #ddd;
+    text-transform: uppercase;
+    box-shadow: 0 1rem 1rem #222;
+}
+.box:not(:last-child) {
+    margin-right: 5%;
+}
+.box h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.box-img img {
+    width: 100%;
+    height: 35rem;
+}
+
+i img {
+    max-height: 10rem;
+}
+
+.btn-link {
+    color: #000;
+    margin-top: 3rem;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+}
+
+.btn-link:hover {
+    color: #222;
+    background-color: #fff;
+}
+
+/* about page  */
+
+#about-section {
+    min-height: 50vh;
+    padding-top: 8rem;
+}
+
+.about-section-content {
+    float: left;
+    width: 50%;
+}
+.about-section-img {
+    display: block;
+    float: right;
+    width: 50%;
+    margin: 0 auto;
+    min-height: 20rem;
+    border-radius: 2rem;
+    background-image: url("../img/hotel5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* testimonial seciton  */
+#testimonial-section {
+    color: rgba(17, 17, 17, 0.787);
+    padding: 5rem 0;
+}
+
+.testimonial-box {
+    min-height: 15rem;
+    padding: 5rem;
+    background-color: rgb(var(--color-secondary));
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 1rem 1rem #333;
+    font-size: 1.6rem;
+}
+
+.testimonial-box img {
+    height: 12rem;
+    border-radius: 50%;
+    display: inline-block;
+    padding-right: 5rem;
+}
+.testimonial-box p {
+    display: inline-block;
+    width: 80%;
+}
+
+/* contact section  */
+
+.contact-form {
+    padding: 2rem 0;
+}
+.form-group label {
+    display: block;
+    font-size: 1.5rem;
+}
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 4px solid rgb(var(--color-secondary));
+}
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+.contact-form a {
+    margin-bottom: 5rem;
+}
+/* footer  */
+footer {
+    text-align: center;
+    padding: 2rem;
+}
