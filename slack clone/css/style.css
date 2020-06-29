@@ -507,6 +507,10 @@ p {
     #hero .hero-container .hero-content p{
         font-size: 1.6rem;
     }
+    #hero .hero-container .hero-img img {
+        width: 100%;
+        transform: scale(1);
+    }
     
     .features-section .features-container .feature-info p {
         font-size: 1.6rem;
