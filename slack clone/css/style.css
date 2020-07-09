@@ -76,7 +76,7 @@ p {
 }
 
 .btn-ghost:hover {
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .border-bottom {
